@@ -1,0 +1,70 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TSPApp - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "midl.exe /nologo /D "NDEBUG" /tlb "Release/TSPAPP.tlb" /mktyplib203 /win32 "D:\Kot\Coding\Projects\CodeProject\TSPApp\TSPAPP.idl""
+Creating command line "rc.exe /l 0x419 /fo"Release/TSPApp.res" /d "NDEBUG" "D:\Kot\Coding\Projects\CodeProject\TSPApp\TSPApp.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAC1.tmp" with contents
+[
+/nologo /MT /W3 /GR /GX /Zi /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_WIN32_DCOM" /Fp"Release/TSPApp.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\Kot\Coding\Projects\CodeProject\TSPApp\BarDlg.cpp"
+"D:\Kot\Coding\Projects\CodeProject\TSPApp\Main.cpp"
+"D:\Kot\Coding\Projects\CodeProject\TSPApp\TSPAPP.cpp"
+"D:\Kot\Coding\Projects\CodeProject\TSPApp\random.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAC1.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAC2.tmp" with contents
+[
+/nologo /MT /W3 /GR /GX /Zi /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_WIN32_DCOM" /Fp"Release/TSPApp.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\Kot\Coding\Projects\CodeProject\TSPApp\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAC2.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAC3.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/TSPApp.pdb" /map:"Release/TSPApp.map" /debug /machine:I386 /out:"Release/TSPApp.exe" 
+.\Release\BarDlg.obj
+.\Release\Main.obj
+.\Release\stdafx.obj
+.\Release\TSPAPP.obj
+.\Release\random.obj
+.\Release\TSPApp.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPAC3.tmp"
+<h3>Output Window</h3>
+Creating Type Library...
+Processing D:\Kot\Coding\Projects\CodeProject\TSPApp\TSPAPP.idl
+TSPAPP.idl
+Processing D:\MsSDK\include\oaidl.idl
+oaidl.idl
+Processing D:\MsSDK\include\objidl.idl
+objidl.idl
+Processing D:\MsSDK\include\unknwn.idl
+unknwn.idl
+Processing D:\MsSDK\include\wtypes.idl
+wtypes.idl
+Processing D:\DxSDK\include\basetsd.h
+basetsd.h
+Processing D:\MsSDK\include\guiddef.h
+guiddef.h
+Compiling resources...
+Compiling...
+stdafx.cpp
+Compiling...
+BarDlg.cpp
+Main.cpp
+TSPAPP.cpp
+random.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+TSPApp.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

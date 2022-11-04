@@ -1,0 +1,263 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAIN DIALOGEX 0, 0, 371, 300
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Traveling Salesman Problem"
+MENU IDR_MENU1
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_BOARD,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,0,4,304,170,WS_EX_STATICEDGE
+END
+
+IDD_BAR DIALOG DISCARDABLE  0, 0, 71, 286
+STYLE DS_CONTROL | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_FRAME,0,1,70,284
+    LTEXT           "&Co-evolution:",IDC_STATIC,5,8,55,8
+    EDITTEXT        IDC_EDIT_COEVOLUTION,5,18,49,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_COEVOLUTION,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,54,18,11,14
+    LTEXT           "&Population:",IDC_STATIC,5,35,55,8
+    EDITTEXT        IDC_EDIT_POPULATION,5,45,49,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_POPULATION,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,55,45,11,14
+    LTEXT           "&Elite:",IDC_STATIC,5,63,55,8
+    EDITTEXT        IDC_EDIT_ELITE,5,73,49,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_ELITE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,55,73,11,
+                    14
+    LTEXT           "M&igration:",IDC_STATIC,5,90,55,8
+    EDITTEXT        IDC_EDIT_MIGRATION,5,100,49,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_MIGRATION,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,54,100,11,14
+    LTEXT           "&Heuristics:",IDC_STATIC,5,116,55,8
+    EDITTEXT        IDC_EDIT_HEURISTICS,5,127,49,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_HEURISTICS,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,54,127,11,14
+    LTEXT           "&Crossover (%):",IDC_STATIC,5,144,55,8
+    EDITTEXT        IDC_EDIT_CROSSOVER,5,155,49,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_CROSSOVER,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,54,155,11,14
+    LTEXT           "&Mutation (%):",IDC_STATIC,5,172,55,8
+    EDITTEXT        IDC_EDIT_MUTATION,5,182,49,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_MUTATION,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,55,182,11,14
+    LTEXT           "Selectio&n:",IDC_STATIC,6,199,44,8
+    COMBOBOX        IDC_COMBO_SELECTION,5,209,50,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Remove t&wins",IDC_CHECK_ELTWINS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,225,57,11
+    PUSHBUTTON      "&Start",IDC_START,5,238,50,14
+    PUSHBUTTON      "S&top",IDC_STOP,5,253,50,14
+    PUSHBUTTON      "C&lear",IDC_CLEAR,5,267,50,14
+END
+
+IDD_NEW DIALOG DISCARDABLE  0, 0, 202, 46
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Map"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,142,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,22,50,14
+    EDITTEXT        IDC_EDIT_POINTS,10,20,95,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_POINTS,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,105,20,11,14
+    LTEXT           "Please, enter a number of points",IDC_STATIC,10,5,110,8
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 300, 65
+STYLE DS_CENTER | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Traveling Salesman Problem v1.0\nExample of using Genetic Algorithm\nFreeware\n(c) Copyright 2001\n Author Konstantin Boukreev\nkonstantin@mail.primorye.ru",
+                    IDC_STATIC,169,8,125,53,0,WS_EX_TRANSPARENT
+    LTEXT           "",IDC_LOGO,4,4,158,56,0,WS_EX_TRANSPARENT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAIN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 279
+        BOTTOMMARGIN, 266
+    END
+
+    IDD_BAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 64
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+    END
+
+    IDD_NEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        RIGHTMARGIN, 280
+        BOTTOMMARGIN, 50
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "&Circle",                     ID_NEW_CIRCLE
+            MENUITEM "&Random",                     ID_NEW_RANDOM
+            MENUITEM SEPARATOR
+            MENUITEM "&Empty",                      IDC_CLEAR
+        END
+        MENUITEM "&Open...",                    ID_FILE_OPEN, GRAYED
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&GA"
+    BEGIN
+        MENUITEM "&Start",                      IDC_START
+        MENUITEM "S&top",                       IDC_STOP, GRAYED
+        MENUITEM "C&lear",                      IDC_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Reset",                      IDC_RESET
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      ID_APP_ABOUT
+        MENUITEM "&Email to Author",            ID_APP_EMAIL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON2               ICON    DISCARDABLE     "icon2.ico"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_GIF
+//
+
+IDR_RT_GIF1             RT_GIF  DISCARDABLE     "Res\\k1_24.gif"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
